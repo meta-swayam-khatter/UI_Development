@@ -1,16 +1,22 @@
+import { useState } from 'react';
 import './App.css'
 
 function App() {
-  const date = new Date();
-  const indianTimeFormatter = new Intl.DateTimeFormat('en-IN', {
-    timeStyle: 'medium',
-    timeZone: 'Asia/Kolkata'
-  });
+  let time = new Date().toLocaleTimeString()
 
-  const formattedTime = indianTimeFormatter.format(date);
+  const [displayTime, setTime] = useState(time)
+  const UpdateTime = () => {
+    time = new Date().toLocaleTimeString()
+    setTime(time)
+  }
+  setInterval(UpdateTime)
   return (
     <>
-      <div>{formattedTime}</div>
+      <div className='flex justify-self-center h-screen font-bold text-4xl'>
+        <div className='self-center'>
+          {displayTime}
+        </div>
+      </div>
     </>
   )
 }
