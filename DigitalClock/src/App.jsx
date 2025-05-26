@@ -12,8 +12,8 @@ function App() {
   setInterval(UpdateTime)
   return (
     <>
-      <div className='flex justify-self-center h-screen font-bold text-4xl'>
-        <div className='self-center'>
+      <div className='flex justify-center h-screen font-bold text-8xl'>
+        <div className='flex justify-center items-center h-[2em] w-[5em] self-center border-3 p-8 rounded-2xl shadow-2xl'>
           {displayTime}
         </div>
       </div>

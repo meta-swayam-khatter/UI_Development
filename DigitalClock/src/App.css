@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Digital';
+    src: url(./fonts/DS-DIGI.TTF) format('woff2');
+    src: url(./fonts/DS-DIGIB.TTF) format('woff2');
+}
+
+* {
+    font-family: 'Digital';
+}
