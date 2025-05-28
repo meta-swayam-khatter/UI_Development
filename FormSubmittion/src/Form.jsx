@@ -77,8 +77,7 @@ function Form() {
                 </div>
 
                 <label className="block">
-                    Upload Avatar:
-                    <input type="file" accept="image/*" onChange={handleImageChange} className="w-full p-2 border rounded mt-1" />
+                    Upload Avatar: <input type="file" accept="image/*" onChange={handleImageChange} className="w-full p-2 border rounded mt-1" />
                 </label>
 
                 <label className="block">
@@ -116,19 +115,10 @@ function Form() {
 
 
                 <div className="flex justify-between mt-4">
-                    <button
-                        type="button"
-                        onClick={handleClear}
-                        className="bg-red-400 text-white px-4 py-2 rounded-md shadow hover:bg-red-500"
-                    >
+                    <button type="button" onClick={handleClear} className="bg-red-400 text-white px-4 py-2 rounded-md shadow hover:bg-red-500" >
                         Clear
                     </button>
-                    <button
-                        type="submit"
-                        disabled={!isFormValid()}
-                        className={`px-4 py-2 rounded-md shadow text-white ${isFormValid() ? 'bg-blue-500 hover:bg-blue-600' : 'bg-gray-400 cursor-not-allowed'
-                            }`}
-                    >
+                    <button type="submit" disabled={!isFormValid()} className={`px-4 py-2 rounded-md shadow text-white ${isFormValid() ? 'bg-blue-500 hover:bg-blue-600' : 'bg-gray-400 cursor-not-allowed'}`} >
                         Submit
                     </button>
                 </div>
